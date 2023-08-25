@@ -10,9 +10,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 import roteadorUsuario from "./routes/usuario.js";
+import loginRouter from "./routes/login.js";
 
 app.use(roteadorUsuario);
-
+app.use(loginRouter);
 
 app.get("/", (req, res) => {        // Cria a rota da raiz do projeto
   res.json({
